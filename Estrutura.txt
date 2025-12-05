@@ -1,0 +1,17 @@
+cocotones/
+  server/
+    package.json
+    .env
+    index.js
+  web/
+    package.json
+    .env
+    index.html
+    src/
+      main.jsx
+      App.jsx
+      components/
+        ChatWindow.jsx
+        MessageBubble.jsx
+      api.js
+      styles.css
