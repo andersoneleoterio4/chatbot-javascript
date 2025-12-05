@@ -149,6 +149,7 @@ select {
 }
 
 .chat-wrapper {
+  padding: 0 16px;
   position: relative;
   min-height: calc(100vh - 160px);
   display: grid;
@@ -174,6 +175,7 @@ select {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow: hidden;
 }
 
 .glass::before {
@@ -202,7 +204,7 @@ select {
 }
 
 .messages {
-  padding: 16px;
+  padding: 20px 26px;
   overflow: auto;
   max-height: 56vh;
   scroll-behavior: smooth;
@@ -214,6 +216,8 @@ select {
   gap: 10px;
   margin: 8px 0;
   align-items: end;
+  position: relative;
+  z-index: 10;
 }
 .bubble {
   padding: 10px 12px;
@@ -223,6 +227,8 @@ select {
   max-width: 70ch;
   line-height: 1.5;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10;
 }
 .bubble.user {
   background: rgba(255, 255, 255, 0.09);
@@ -239,10 +245,10 @@ select {
   color: var(--muted);
 }
 .bubble-row.left {
-  grid-template-columns: auto 1fr 0;
+  grid-template-columns: auto 1fr auto;
 }
 .bubble-row.right {
-  grid-template-columns: 0 1fr auto;
+  grid-template-columns: auto 1fr auto;
   justify-items: end;
 }
 .bubble-avatar {
